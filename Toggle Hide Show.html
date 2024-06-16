@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Hide Show</title>
+  <style>
+    button{
+      color: white;
+      background-color: #444242;
+      padding-inline: 12px ;
+      padding-block: 8px;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    #container{
+      width: max-content;
+      height: 100px;
+      background-color: skyblue;
+      padding-inline: 10px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn">Click me</button>
+
+  <div id="container">
+    <h1>Toggle btween hiding and showing me!</h1>
+  </div>
+
+  <script>
+   const btn = document.getElementById("btn");
+   
+   btn.addEventListener('click', ()=>{
+    var container = document.getElementById("container")
+    if(container.style.display === 'none'){
+      container.style.display = "block";
+    }else{
+      container.style.display = "none"
+    }
+   })
+  </script>
+</body>
+</html>
